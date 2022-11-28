@@ -45,7 +45,7 @@ const SignUp = () => {
                 console.log(user);
             })
             .catch(error => console.error(error));
-    }
+    };
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
