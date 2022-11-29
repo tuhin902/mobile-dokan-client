@@ -13,7 +13,7 @@ const Banner = () => {
                         <h3 className='text-6xl font-bold text-white'>Big sale is comming <br /> on this friday</h3>
                     </div>
                     <div className="absolute flex justify-between w-1/2 transform -translate-y-1/2 left-24 right-5 top-2/3">
-                        <p className='text-xl text-white'>we are  going to give some discount on some of our laptop. this offer will only available on friday.be ready to grab your desire laptop on a discount price.</p>
+                        <p className='text-xl text-white'>we are  going to give some discount on some of our mobile. this offer will only available on friday.be ready to grab your desire mobile on a discount price.</p>
                     </div>
                     <div className="absolute flex justify-start w-1/2 transform -translate-y-1/2 left-24 right-5 top-3/4">
                         <button className="btn btn-info mr-5">Discount more</button>
@@ -33,7 +33,7 @@ const Banner = () => {
                     <h3 className='text-6xl font-bold text-white'>Best Service in city</h3>
                 </div>
                 <div className="absolute flex justify-between w-1/2 transform -translate-y-1/2 left-24 right-5 top-2/3">
-                    <p className='text-xl text-white'>After buying laptop from us you will reacive best service from us . we always care about our customer that why we provide service to our customer </p>
+                    <p className='text-xl text-white'>After buying mobile from us you will reacive best service from us . we always care about our customer that why we provide service to our customer </p>
                 </div>
                 <div className="absolute flex justify-start w-1/2 transform -translate-y-1/2 left-24 right-5 top-3/4">
                     <button className="btn btn-info mr-5">Discount more</button>
@@ -52,7 +52,7 @@ const Banner = () => {
                     <h3 className='text-6xl font-bold text-white'>Special discount offer</h3>
                 </div>
                 <div className="absolute flex justify-between w-1/2 transform -translate-y-1/2 left-24 right-5 top-2/3">
-                    <p className='text-xl text-white'>We are giving a special discount on Lenovo laptop(selected item). this discount wil only available for few days. so buy as soon as possible to get our special offer.</p>
+                    <p className='text-xl text-white'>We are giving a special discount on Samsung mobile(selected item). this discount wil only available for few days. so buy as soon as possible to get our special offer.</p>
                 </div>
                 <div className="absolute flex justify-start w-1/2 transform -translate-y-1/2 left-24 right-5 top-3/4">
                     <button className="btn btn-info mr-5">Discount more</button>
@@ -71,7 +71,7 @@ const Banner = () => {
                     <h3 className='text-6xl font-bold text-white'>Good news for Gammers</h3>
                 </div>
                 <div className="absolute flex justify-between w-1/2 transform -translate-y-1/2 left-24 right-5 top-2/3">
-                    <p className='text-xl text-white'>The new MSI Gaming laptop with GEFORCE RTX 20 serise is available. pre order now to get the best gaming experience with GEFORCE RTX 20 as soon as possible.</p>
+                    <p className='text-xl text-white'>The new Gaming mobile with bionic serise is available. pre order now to get the best gaming experience with boinic as soon as possible.</p>
                 </div>
                 <div className="absolute flex justify-start w-1/2 transform -translate-y-1/2 left-24 right-5 top-3/4">
                     <button className="btn btn-info mr-5">Discount more</button>
