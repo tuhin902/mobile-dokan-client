@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import Loading from '../../Shared/Loading/Loading';
 import CategoryCard from './CategoryCard';
 
 const Categories = () => {
 
 
-    const { data: categories = [] } = useQuery({
+    const { data: categories = [], isLoading } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
             const res = await fetch('http://localhost:4000/categories')
@@ -13,6 +14,10 @@ const Categories = () => {
             return data;
         }
     });
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     return (
         <div className='my-16'>

@@ -1,16 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ category }) => {
 
-    const { categoryName, image } = category;
+    const { type, image } = category;
     return (
-        <div className="card w-96 bg-base-100 border shadow-purple-400 shadow-xl">
-            <figure><img src={image} alt="mobile" className='w-full h-64 ' /></figure>
-            <div className="card-body ">
-                <h2 className="card-title">Type:{categoryName}</h2>
+        <Link to={`/categories/${type}`}>
+            <div className="card shadow-cyan-400 shadow-xl">
+                <figure><img src={image} alt="mobile" className='w-full h-64 ' /></figure>
+                <div className="card-body ">
+                    <h2 className="card-title">Type:{type}</h2>
 
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

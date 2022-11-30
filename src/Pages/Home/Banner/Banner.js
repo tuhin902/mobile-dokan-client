@@ -3,7 +3,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className="carousel  w-full lg:w-3/4  mx-auto rounded-xl">
+        <div className="carousel mt-20 shadow-md shadow-cyan-400 w-full lg:w-3/4  mx-auto rounded-xl">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='carousel-img'>
                     <img className=' h-4/5' src="https://i0.wp.com/www.mobilebd.co/wp-content/uploads/2022/05/Apple-Original-new-iPhone-price-in-Bangladesh-under-20k-who-will-buy.jpg?fit=1239%2C679&ssl=1" alt='' />
