@@ -10,11 +10,10 @@ const Products = () => {
     const params = useParams();
     const [modalData, setModalData] = useState({});
 
-    const { data: products = [], isLoading } = useQuery({
+    const { data: products = [], refetch, isLoading } = useQuery({
         queryKey: ['product'],
         queryFn: async () => {
             const res = await axios.get(`http://localhost:4000/categories/${params?.type}`);
-            console.log(params);
             return res.data;
         }
     });
@@ -36,7 +35,10 @@ const Products = () => {
                         ></ProductsCard>)
                     }
                 </div>
-                <BookingModal modalData={modalData}></BookingModal>
+                <BookingModal modalData={modalData}
+                    setModalData={setModalData}
+                    refetch={refetch}
+                ></BookingModal>
             </section>
         </div>
     );
