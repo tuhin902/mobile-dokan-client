@@ -4,21 +4,22 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { createUser, signInWithGoogle } = useContext(AuthContext);
+    const { createUser, signInWithGoogle, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUpError] = useState('');
-    // const [createdUserEmail, setCreatedUserEmail] = useState('');
-    // const [token] = useToken(createdUserEmail);
+    const [createdUserEmail, setCreatedUserEmail] = useState('');
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
 
     const googleProvider = new GoogleAuthProvider();
 
-    // if (token) {
-    //     navigate('/');
-    // }
+    if (token) {
+        navigate('/');
+    }
 
 
     const handleSignUp = (data) => {
@@ -28,8 +29,15 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
                 toast('user Created Succesfully.')
+                const userInfo = {
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                    .then(() => {
+                        saveUser(data.name, data.email)
+                    })
+                    .catch(err => console.log(err));
             })
             .catch(error => {
                 console.error(error)
@@ -38,6 +46,25 @@ const SignUp = () => {
 
     };
 
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:4000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreatedUserEmail(email);
+
+            })
+    }
+
+
+
+    //google sign in
     const handleGoogle = () => {
         signInWithGoogle(googleProvider)
             .then(result => {

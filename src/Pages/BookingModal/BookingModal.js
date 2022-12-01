@@ -20,7 +20,7 @@ const BookingModal = ({ modalData, refetch }) => {
         console.log(name, email, item, price, phone, address, location);
 
         const booking = {
-            buyer: name,
+            name,
             email,
             item,
             price,
