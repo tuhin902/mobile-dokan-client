@@ -7,6 +7,8 @@ import BookedProducts from "../../Pages/Dashboard/BookedProducts/BookedProducts"
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
+import AddProducts from "../../Pages/MyProducts/AddProducts";
+import MyProducts from "../../Pages/MyProducts/MyProducts";
 import NotFound from "../../Pages/NotFound/NotFound";
 import Products from "../../Pages/Products/Products";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -35,9 +37,17 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
+                path: '/myproducts',
+                element: <MyProducts></MyProducts>
+            },
+            {
+                path: '/addproducts',
+                element: <AddProducts></AddProducts>
+            },
+            {
                 path: '/blog',
                 element: <Blogs></Blogs>
-            }
+            },
         ]
 
     },
