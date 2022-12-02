@@ -7,7 +7,7 @@ const MyProducts = () => {
     const { data: myProducts = [] } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:4000/myproducts');
+            const res = await fetch('https://mobile-dokan-server.vercel.app/myproducts');
             const data = res.json();
             return data;
         }

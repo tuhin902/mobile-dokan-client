@@ -13,7 +13,7 @@ const Products = () => {
     const { data: products = [], refetch, isLoading } = useQuery({
         queryKey: ['product'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:4000/categories/${params?.type}`);
+            const res = await axios.get(`https://mobile-dokan-server.vercel.app/categories/${params?.type}`);
             return res.data;
         }
     });

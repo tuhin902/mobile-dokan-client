@@ -9,7 +9,7 @@ const Categories = () => {
     const { data: categories = [], isLoading } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:4000/categories')
+            const res = await fetch('https://mobile-dokan-server.vercel.app/categories')
             const data = res.json();
             return data;
         }

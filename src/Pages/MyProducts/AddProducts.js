@@ -28,7 +28,7 @@ const AddProducts = () => {
             mobile
         };
 
-        fetch('http://localhost:4000/addproducts', {
+        fetch('https://mobile-dokan-server.vercel.app/addproducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

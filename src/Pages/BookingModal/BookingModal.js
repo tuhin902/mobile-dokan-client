@@ -29,7 +29,7 @@ const BookingModal = ({ modalData, refetch }) => {
             location
         }
 
-        fetch('http://localhost:4000/bookings', {
+        fetch('https://mobile-dokan-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

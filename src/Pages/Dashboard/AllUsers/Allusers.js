@@ -6,14 +6,14 @@ const Allusers = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:4000/users');
+            const res = await fetch('https://mobile-dokan-server.vercel.app/users');
             const data = res.json();
             return data
         }
     });
 
     const handleMakeAdmin = id => {
-        fetch(`http://localhost:4000/users/admin/${id}`, {
+        fetch(`https://mobile-dokan-server.vercel.app/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
